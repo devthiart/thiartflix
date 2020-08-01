@@ -27,6 +27,8 @@ a {
 } 
 
 #root {
+  background-color: var(--blackBackground);
+  color: var(--white);
   /*100vh é 100% da tela que está abrindo o site. Neste caso é subtraido o valor do menu.*/
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
