@@ -7,6 +7,7 @@
   /*--primary: #2A7AE4;*/
   --primary: #FF5500;
   --black: #000000;
+  --blackBackground: #141414;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
@@ -24,3 +25,10 @@ body {
 a {
   color: inherit;
 } 
+
+#root {
+  /*100vh é 100% da tela que está abrindo o site. Neste caso é subtraido o valor do menu.*/
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}

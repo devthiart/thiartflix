@@ -1,6 +1,9 @@
 import styled from 'styled-components';
+//import { Link } from 'react-router-dom';
 
 //Colocamos o CSS no botão atravéz do módulo 'styled-components'.
+//Para estilizar o Link do react-router-dom, precisamos passa-lo como parâmetro.
+//const Button = styled(Link)`
 const Button = styled.button`
     color: var(--white);
     border: 1px solid var(--white);
