@@ -47,7 +47,9 @@ function CadastroCategoria() {
     //array vazio, ele executa quando a página é carregada.
     useEffect(() => {
         console.log('use effect funcionando.');
-        const URL = 'http://localhost:8080/categorias';
+        const URL = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8080/categorias'
+        : 'https://thiartflix.herokuapp.com/categorias';
         fetch(URL)
             .then(async (respostaDoServidor) => {
                 //Utilizamos await para esperar a resposta do servidor. 
