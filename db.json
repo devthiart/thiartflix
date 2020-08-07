@@ -1,10 +1,137 @@
 {
-    "categorias": [
-        {
-            "id": 1,
-            "nome": "Front End",
-            "descricao": "Uma categoria bacanuda",
-            "cor": "#cbd1ff"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Front End",
+      "descricao": "Uma categoria bacanuda",
+      "cor": "#FF5500"
+    },
+    {
+      "id": 2,
+      "titulo": "Empreendedorismo",
+      "descricao": "Outra categoria bacanuda",
+      "cor": "#0055FF"
+    }
+  ],
+  "videos": [
+    {
+      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw",
+      "categoriaId": 1,
+      "id": 1
+    },
+    {
+      "titulo": "Por que você deveria aprender primeiro front end - Programador BR Ep.62",
+      "url": "https://www.youtube.com/watch?v=xeNWtCGtwuY",
+      "categoriaId": 1,
+      "id": 2
+    },
+    {
+      "titulo": "As Skills de um Desenvolvedor Front-End // Vlog #70",
+      "url": "https://www.youtube.com/watch?v=TWy2rxyZLrE",
+      "categoriaId": 1,
+      "id": 3
+    },
+    {
+      "titulo": "Trabalhar para uma grande empreza ou criar seu próprio negócio?",
+      "url": "https://www.youtube.com/watch?v=kBgRzrFT-SI",
+      "categoriaId": 2,
+      "id": 4
+    },
+    {
+      "titulo": "Me arrependi de ser desenvolvedor independente? Quais minhas dicas.",
+      "url": "https://www.youtube.com/watch?v=CrwqUJmARwo",
+      "categoriaId": 2,
+      "id": 5
+    },
+    {
+      "titulo": "3 projetos de nível iniciante que geram até $3000 por Mês",
+      "url": "https://www.youtube.com/watch?v=n3tMEOw9KGY",
+      "categoriaId": 2,
+      "id": 6
+    },
+    {
+      "titulo": "3 Apps 'ridículos' que faturam mais de 10 mil dólares",
+      "url": "https://www.youtube.com/watch?v=aw6qSf-pg5w",
+      "categoriaId": 2,
+      "id": 7
+    },
+    {
+      "titulo": "3 jogos de celular que faturam mais de 10 mil Reais e você poderia ter feito.",
+      "url": "https://www.youtube.com/watch?v=LYNmZMBe4xA",
+      "categoriaId": 2,
+      "id": 8
+    },
+    {
+      "titulo": "Antes de ser frontend assista esse vídeo.",
+      "url": "https://www.youtube.com/watch?v=hGalqf_D8To",
+      "categoriaId": 1,
+      "id": 9
+    },
+    {
+      "titulo": "Como desenhar utilizando Javascript Vanilla Canvas",
+      "url": "https://www.youtube.com/watch?v=bLvDJ_a32uM",
+      "categoriaId": 1,
+      "id": 10
+    },
+    {
+      "titulo": "O que estudar para conseguir um emprego com front-end",
+      "url": "https://www.youtube.com/watch?v=HxVGCjTtzOQ",
+      "categoriaId": 1,
+      "id": 11
+    },
+    {
+      "titulo": "Crie Ambientes Front-End em Minutos // Mão no Código #1",
+      "url": "https://www.youtube.com/watch?v=LT-iNSrGoP8",
+      "categoriaId": 1,
+      "id": 12
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": 1,
+      "id": 13
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": 1,
+      "id": 14
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": 1,
+      "id": 15
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": 1,
+      "id": 16
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": {
+        "id": 2,
+        "titulo": "Empreendedorismo",
+        "descricao": "Outra categoria bacanuda",
+        "cor": "#0055FF"
+      },
+      "id": 17
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": 2,
+      "id": 18
+    },
+    {
+      "titulo": "Imersão React - Aula 5",
+      "url": "https://youtu.be/hhQ3RtvmfEg",
+      "categoriaId": 2,
+      "id": 19
+    }
+  ]
 }

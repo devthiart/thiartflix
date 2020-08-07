@@ -3,50 +3,23 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
     const valoresIniciais = {
-        nome: '',
+        titulo: '',
         descricao: '',
         cor: '',
     };
 
+    const { values, handleChange, clearForm } = useForm(valoresIniciais);
+
     const [categorias, setCategorias] = useState([]);
-    // A função useState retorna um array em que na primeira posição está o nome do
-    // conteúdo, e na segunda esta uma função que altera o nome do conteúdo.
-    const [values, setValues] = useState(valoresIniciais);
-
-    function setValue(chave, valor) {
-        // '[chave]: valor' é a maneira do JS atribuir um valor a um certo elemento (id ou chave).
-        setValues({
-            ...values,
-            [chave]: valor,
-        });
-    }
-
-    function handleChange(infosDoEvento) {
-        // Pega o atributo "name" do HTML e o valor da tag.
-        setValue(
-            infosDoEvento.target.getAttribute('name'),
-            infosDoEvento.target.value,
-        );
-
-        /*
-        //Abrimos a variável infosDoEvento.target e pegamos somente o 'getAttributes' e o 'value'.
-        const { getAttributes, value } = infosDoEvento.target;
-        //Com as informações que pegamos acima, utilizamos estas infos no método setValue.
-        setValue(
-            getAttributes('name'),
-            value
-        );
-        */
-    }
 
     //Utilizamos useEffect quando queremos que algo aconteça em determinado momento.
     //Ele recebe dois parametros, o que deve fazer e quando fazer. Quando passamos o 
     //array vazio, ele executa quando a página é carregada.
     useEffect(() => {
-        console.log('use effect funcionando.');
         const URL = window.location.hostname.includes('localhost')
         ? 'http://localhost:8080/categorias'
         : 'https://thiartflix.herokuapp.com/categorias';
@@ -59,6 +32,11 @@ function CadastroCategoria() {
                     ...resposta,
                 ]);
             })
+            .catch( respostaDoServidor =>
+                <div>
+                    <p>Não foi possível conectar ao servidor</p>
+                </div>
+            );
     }, []);
 
     return (
@@ -66,7 +44,7 @@ function CadastroCategoria() {
             <PageDefault>
                 <h1>
                 Cadastro de Categoria:
-                {values.nome}
+                {values.titulo}
               </h1>
 
                 <form onSubmit={
@@ -81,15 +59,15 @@ function CadastroCategoria() {
                         setCategorias([...categorias, values]);
 
                         // limpa o formulário.
-                        setValues(valoresIniciais);
+                        clearForm(valoresIniciais);
                     }
                 }
                 >
                     <FormField
                         label="Nome da Categoria"
                         type="text"
-                        name="nome"
-                        value={values.nome}
+                        name="titulo"
+                        value={values.titulo}
                         onChange={handleChange}
                     />
 
@@ -170,8 +148,8 @@ function CadastroCategoria() {
                 <ul>
                     {
                         categorias.map((categoria) => (
-                            <li key={`${categoria.nome}`}>
-                                {categoria.nome}
+                            <li key={`${categoria.titulo}`}>
+                                {categoria.titulo}
                           </li>
                         ))
                     }

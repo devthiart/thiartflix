@@ -1,13 +1,16 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
 import Menu from '../Menu';
 import Footer from '../Footer';
-import styled from 'styled-components';
 
 const Main = styled.main`
     flex: 1;
     padding-top: 50px;
     padding-left: 5%;
     padding-right: 5%;
+    ${({ paddingAll }) => css`
+        padding: ${ paddingAll };
+    `}
 `;
 
 //<></> = É o mesmo que utilizar a tag <React.Fragment> do React, porém
@@ -16,11 +19,11 @@ const Main = styled.main`
 //Posso pegar o objeto props diretamente e acessar o que eu preciso
 //ou utilizando {} eu pego a propriedade ou método específico que desejo utilizar.
 //function PageDefault(props){
-function PageDefault({ children }) {
+function PageDefault({ children, paddingAll }) {
     return (
         <>
             <Menu />
-                <Main>
+                <Main paddingAll={paddingAll}>
                     { /*props.children */ }
                     { children }
                 </Main>
