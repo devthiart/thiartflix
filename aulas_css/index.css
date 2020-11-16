@@ -1,0 +1,31 @@
+/*Utilizamos o index.css como reset*/
+* {
+    /** border-box faz com que consigamos definir um tamanho para o elemento, 
+        se não colocarmos esta propriedade e definirmos um tamanho de 50px,
+        mas ele tiver um padding de 5px, ele terá o tamanho de 55px.
+    */
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Conseguimos colocar variáveis no CSS dentro da ':root'*/
+:root {
+    --primary: #2A7AE4;
+    --black: #000000;
+    --blackLighter: #9E9E9E;
+    --grayLight: #F5F5F5;
+    --grayMedium: #e5e5e5; 
+    --grayDark: #141414;
+    --white: #FFFFFF;
+    --frontEnd: #6BD1FF;
+    --backEnd: #00C86F;
+}
+
+html, body  {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}

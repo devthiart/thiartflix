@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 //BrouserRouter: Responsável por "empacotar" nossa aplicação para utilizar as rotas do react-router-dom.
 //Switch: Responsável por verificar qual endereço o usuário está.
 //Route: Responsável por armazenar os dados de que endereço vai para qual página (componente).
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './index.css';
 import Home from './pages/Home';
 import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
